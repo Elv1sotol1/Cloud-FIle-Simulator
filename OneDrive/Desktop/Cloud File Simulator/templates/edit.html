@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit File</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='file.css') }}">
+</head>
+<body>
+
+    </style>
+    <div class="container">
+        <h1>Edit File</h1>
+        <div class="edit-section">
+            <form method="POST">
+                <label for="old_filename">Current Filename:</label>
+                <input type="text" id="old_filename" name="old_filename" value="{{ filename }}" readonly>
+               
+                <label for="new_filename">New Filename:</label>
+                <input type="text" id="new_filename" name="new_filename" value="" required>
+               
+                <label for="file_content">File Content:</label>
+                <textarea id="file_content" name="file_content" rows="10">{{ content }}</textarea>
+               
+                <button type="submit">Update File</button>
+                <a href="{{ url_for('index') }}" class="btn cancel-btn">Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
