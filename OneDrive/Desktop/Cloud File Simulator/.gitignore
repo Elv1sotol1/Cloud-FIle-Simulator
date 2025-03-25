@@ -1,0 +1,41 @@
+Add-Content .gitignore @"
+# Python-specific
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+*.sqlite3
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and databases
+*.log
+
+# Flask-specific
+instance/
+.webassets-cache
+
+# Deployment and configuration
+.env
+.venv
+"@
